@@ -2,7 +2,7 @@
   "name": "post-your-form",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://wils0nc00k.github.io/React-Life-Cycles/",
+  "homepage": "https://wils0nc00k.github.io/Post-Your-Form/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
