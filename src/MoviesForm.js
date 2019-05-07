@@ -4,8 +4,8 @@ class MoviesForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          favouriteFilm: '',
-          filmPoster: '',
+          name: '',
+          poster: '',
           comment: '',
         }
         this.onChange = this.onChange.bind(this);
@@ -27,12 +27,13 @@ class MoviesForm extends React.Component {
         e.preventDefault();
         const url = 'http://campus-bordeaux.ovh:3001/api/quests/movies/';
         const config = {
-          method: "POST",
+          method: 'POST',
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(this.state),
         };
+        console.log(this.state)
         
         fetch(url, config)
         .then(res => res.json())
@@ -60,9 +61,9 @@ class MoviesForm extends React.Component {
                     <input
                       type="text"
                       id="favouriteFilm"
-                      name="favouriteFilm"
+                      name="name"
                       onChange={this.onChange}
-                      value={this.state.lastname}
+                      value={this.state.name}
                     />
                   </div>
 
@@ -71,9 +72,9 @@ class MoviesForm extends React.Component {
                     <input
                       type="url"
                       id="film"
-                      name="filmPoster"
+                      name="poster"
                       onChange={this.onChange}
-                      value={this.state.firstname}
+                      value={this.state.poster}
                     />
                   </div>
             
@@ -84,7 +85,7 @@ class MoviesForm extends React.Component {
                       id="comment"
                       name="comment"
                       onChange={this.onChange}
-                      value={this.state.email}
+                      value={this.state.comment}
                     />
                   </div>
                   <div className="form-data">
